@@ -4,10 +4,14 @@ organization := "data.kabalo"
 
 scalaVersion := "2.11.8"
 
-libraryDependencies ++= Seq(
-  "org.scalanlp" %% "breeze"          % "0.13.1",
-  "org.scalanlp" %% "breeze-natives"  % "0.13.1",
-  "org.scalanlp" %% "breeze-viz"      % "0.13.1"
-)
+libraryDependencies ++= {
+  val breeze_v = "0.13.2"
+
+  Seq(
+    "org.scalanlp" %% "breeze"          % breeze_v,
+    "org.scalanlp" %% "breeze-natives"  % breeze_v,
+    "org.scalanlp" %% "breeze-viz"      % breeze_v
+  )
+}
 
 resolvers += "Sonatype Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/"
